@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>MY TODO LIST</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body{background-color: powderblue;}
+            .wrapper{
+                margin: 120px auto;
+                max-width: 400px;
+                width: 100%;
+                background: plum;
+                border-radius: 5px;
+                padding: 25px;
+            }
+            .wrapper header{
+                font-size: 30px;
+                font-weight: 600;
+            }
+            .wrapper .inputField{
+                display: flex;
+                height: 45px;
+                width: 100%;
+                margin: 20px 0;
+            }
+            .inputField input{
+                width: 85%;
+                height:100%;
+                border: 1px solid black;
+                font-size: 17px;
+                border-radius: 3px;
+                padding-left: 15px;
+
+            }
+            .inputField button{
+                width: 60px;
+                height:100%;
+                border: none;
+                outline: none;
+                background: blueviolet;
+                color: antiquewhite;
+                font-size: 22px;
+                cursor: pointer;
+                border-radius: 3px;
+                margin-left:5px;
+                opacity: 0.6;
+                pointer-events: none;
+
+            }
+            .inputField button.active{
+                opacity: 1;
+                pointer-events: auto;
+            }
+            .wrapper .todoList{
+                max-height: 250px;
+                overflow-y: auto;
+
+            }
+            .todoList li{
+                list-style:none;
+                height:45px;
+                line-height: 45px;
+                position: relative;
+                background:grey;
+                border-radius: 3px;
+                margin-bottom: 8px;
+                padding: 0 15px;
+            }
+            .todoList li span{
+                position:absolute;
+                right:0px;
+                color: antiquewhite;
+                width: 45px;
+                text-align: center;
+                background: red;
+                border-radius: 0 3px 3px 0;
+                cursor:pointer;
+
+            }
+            .wrapper .footer{
+                display: flexbox;
+                width:100%;
+                align-items: center;
+                margin-top: 20px;
+                justify-content: space-between;
+            }
+            .footer button{
+                border: none;
+                outline: none;
+                background: blueviolet;
+                color: antiquewhite;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 3px;
+                margin-left:6px 10px;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>MY TODO LIST</header>
+            <div class="inputField" id="inputField">
+                
+                <input type="text" placeholder="Add the task" id="newTask">
+                <button class="active" id="submit" onclick="add()"><i class="fa fa-plus"></i></button>
+
+            </div>
+            <div class="todo list">
+            <ul class="todoList" id="todoList">
+                
+            </ul>
+            </div>
+        </div>
+        <script type="text/javascript" src="todo.js"></script>
+    </body>
+</html>
